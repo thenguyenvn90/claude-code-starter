@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "deny": [
+      "Write(.env*)",
+      "Write(**/*.secret)",
+      "Write(**/*.pem)",
+      "Bash(rm -rf *)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | sh)"
+    ],
+    "ask": [
+      "Bash(git push **)",
+      "Bash(git commit **)",
+      "Bash(npm install *)"
+    ]
+  }
+}
