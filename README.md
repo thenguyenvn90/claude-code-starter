@@ -11,20 +11,33 @@ Works for everyone: developers, content creators, marketers, and anyone learning
 - [Claude Code installed](https://ongboit.com/cai-dat-claude-code/) (Pro plan $20/mo recommended)
 - Git installed
 
-### Setup
+### Option A: Download (no Git required)
 
 ```bash
-# 1. Use this template (click "Use this template" on GitHub) or clone directly
-git clone https://github.com/ongboit/claude-code-starter.git my-project
+# Download and extract
+curl -L https://github.com/thenguyenvn90/claude-code-starter/archive/refs/heads/main.zip -o starter.zip
+unzip starter.zip
+mv claude-code-starter-main my-project
 cd my-project
+```
 
-# 2. Start Claude Code
+### Option B: Git clone
+
+```bash
+git clone https://github.com/thenguyenvn90/claude-code-starter.git my-project
+cd my-project
+```
+
+### Then start building
+
+```bash
+# Start Claude Code
 claude
 
-# 3. Let Claude analyze your project and customize CLAUDE.md
+# Let Claude analyze your project and customize CLAUDE.md
 /init
 
-# 4. Start building! Copy a prompt from FIRST-PROMPTS.md or describe what you want.
+# Start building! Copy a prompt from FIRST-PROMPTS.md or describe what you want.
 ```
 
 ## What's Inside
