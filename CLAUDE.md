@@ -72,6 +72,7 @@ Rule: if a rule matters, put it in CLAUDE.md — not in chat.
 
 - Add project-specific warnings here as you discover them.
 - Example: "Never run migrations without a backup — prod DB has no rollback."
+- **Plan the undo before shipping.** Every change needs a rollback path — revert commit, feature flag flip, or migration rollback. No answer = not ready. Gate risky changes behind a flag so rollback is a toggle, not a redeploy.
 
 ## Reference Docs
 
