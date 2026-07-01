@@ -1,14 +1,54 @@
+![Claude Code Starter: a production-ready template with CLAUDE.md, .claude/settings.json, rules, and opt-in extras](assets/cover.svg)
+
 # Claude Code Starter
 
 > 🇬🇧 English (this file) · 🇻🇳 [Tiếng Việt](README.vi.md)
 
-A production-ready template for starting any project with Claude Code. Clone, run `claude`, and start building —
-then add curated [extras](extras/) (status line, hooks, sandbox, skills, subagents) when you want them.
+**A production-ready template for starting any project with [Claude Code](https://claude.ai/claude-code).** Clone it, run `claude`, and start building on a sane default: a fill-in `CLAUDE.md`, security permissions that block dangerous commands, quality + security rules, and a set of opt-in [extras](extras/) (status line, hooks, sandbox, skills, subagents) you add only when you want them.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Starter-orange)](https://claude.ai/claude-code)
+[![Install as plugin](https://img.shields.io/badge/Install-as%20plugin-blue)](#optional-extras)
+[![Guides](https://img.shields.io/badge/Guides-ongboit.com-ff7f00)](https://ongboit.com/)
 
 Works for everyone: developers, content creators, marketers, and anyone learning Claude Code.
 
-The core guidelines in `.claude/rules/AGENT.md` build on [Andrej Karpathy's four principles](https://github.com/multica-ai/andrej-karpathy-skills)
-for reducing LLM coding mistakes (Think Before Coding · Simplicity First · Surgical Changes · Goal-Driven Execution).
+### Why this starter
+
+- **Fewer AI mistakes by default.** The behavioral rules in `.claude/rules/AGENT.md` build on [Andrej Karpathy's four principles](https://github.com/multica-ai/andrej-karpathy-skills): Claude states its assumptions, keeps changes minimal and surgical, and verifies its own work instead of guessing.
+- **Safe from the first prompt.** `.claude/settings.json` blocks destructive commands and asks before `git push`; a security rule and an optional hook keep your `.env` and keys out of Claude's reach.
+- **Batteries included, opt-in.** The core is enough to start. Everything else lives in `extras/` — each add-on has its own README and a link to a full guide, so you copy in only what you need.
+- **Language-agnostic.** Python, Go, JS, Ruby, or no code at all. Fill in Tech Stack + Commands and go.
+
+## The four principles
+
+![The four principles: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution](assets/principles.svg)
+
+These four principles, adapted from Karpathy's repo, are the heart of `.claude/rules/AGENT.md`. In plain terms:
+
+1. **Think Before Coding** — state assumptions, surface tradeoffs, ask when unclear instead of guessing.
+2. **Simplicity First** — the minimum code that solves the problem; nothing speculative.
+3. **Surgical Changes** — touch only what the task needs; don't "improve" unrelated code.
+4. **Goal-Driven Execution** — define success, then verify every claim (file exists? test passes?) before saying "done".
+
+## Who this is for
+
+- **New to Claude Code** — you get a working setup and a guided 10-step tutorial (`FIRST-PROMPTS.md`) instead of a blank folder.
+- **Developers** — drop `.claude/` + `CLAUDE.md` into any repo, run `/init`, and Claude works with guardrails and quality rules from prompt one.
+- **Content creators & marketers** — the same discipline (no fabrication, human-in-the-loop, safe file handling) applies to writing and automation work, not just code.
+
+## Table of Contents
+
+- [Quick Start](#quick-start-3-minutes)
+- [What's Inside](#whats-inside)
+- [Optional Extras](#optional-extras)
+- [How It Works](#how-it-works)
+- [Customize for Your Project](#customize-for-your-project)
+- [First Project Ideas](#first-project-ideas)
+- [Essential Commands](#essential-commands)
+- [Learn More](#learn-more)
+- [FAQ](#faq)
+- [License](#license)
 
 ## Quick Start (3 minutes)
 
@@ -62,8 +102,9 @@ claude
 
 ## Optional Extras
 
-The core above is enough to start. When you want more, `extras/` has opt-in add-ons — each with its own README
-and a link to a full guide on ongboit.com. Copy in only what you need.
+![Extras: a project core surrounded by five opt-in add-ons — statusline, hooks, sandbox, skills, subagents](assets/extras.svg)
+
+The core above is enough to start. When you want more, `extras/` has opt-in add-ons — each with its own README and a link to a full guide on ongboit.com. Copy in only what you need.
 
 | Extra | What it does | Guide |
 |---|---|---|

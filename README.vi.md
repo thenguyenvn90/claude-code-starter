@@ -1,14 +1,41 @@
+![Claude Code Starter: template sẵn-sàng-chạy gồm CLAUDE.md, .claude/settings.json, rules và các extras tùy chọn](assets/cover.svg)
+
 # Claude Code Starter (Tiếng Việt)
 
 > 🇻🇳 Tiếng Việt (file này) · 🇬🇧 [English](README.md)
 
-Một template sẵn-sàng-chạy để bắt đầu bất kỳ dự án nào với Claude Code. Clone, gõ `claude`, và bắt đầu build —
-rồi thêm các [extras](extras/) chọn lọc (status line, hooks, sandbox, skills, subagents) khi cần.
+**Một template sẵn-sàng-chạy để bắt đầu bất kỳ dự án nào với [Claude Code](https://claude.ai/claude-code).** Clone, gõ `claude`, và bắt đầu build trên một nền mặc định hợp lý: `CLAUDE.md` điền-vào-là-xong, quyền bảo mật chặn lệnh nguy hiểm, rules chất lượng + bảo mật, và các [extras](extras/) opt-in (status line, hooks, sandbox, skills, subagents) chỉ thêm khi cần.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Starter-orange)](https://claude.ai/claude-code)
+[![Install as plugin](https://img.shields.io/badge/Install-as%20plugin-blue)](#extras-tùy-chọn)
+[![Guides](https://img.shields.io/badge/Guides-ongboit.com-ff7f00)](https://ongboit.com/)
 
 Hợp cho mọi người: dev, người làm nội dung, marketer, và bất kỳ ai đang học Claude Code.
 
-Phần guidelines lõi trong `.claude/rules/AGENT.md` xây trên [4 nguyên tắc của Andrej Karpathy](https://github.com/multica-ai/andrej-karpathy-skills)
-để giảm lỗi khi AI code (Think Before Coding · Simplicity First · Surgical Changes · Goal-Driven Execution).
+### Vì sao nên dùng
+
+- **Giảm lỗi AI ngay từ mặc định.** Rules hành vi trong `.claude/rules/AGENT.md` xây trên [4 nguyên tắc của Andrej Karpathy](https://github.com/multica-ai/andrej-karpathy-skills): Claude nói rõ giả định, giữ thay đổi tối giản và đúng phạm vi, tự kiểm chứng thay vì đoán.
+- **An toàn từ prompt đầu tiên.** `.claude/settings.json` chặn lệnh phá hoại và hỏi trước khi `git push`; rule bảo mật + hook tùy chọn giữ `.env` và key khỏi tầm với của Claude.
+- **Đầy đủ nhưng opt-in.** Phần lõi đủ để bắt đầu; còn lại nằm trong `extras/`, mỗi cái có README + link bài hướng dẫn, copy đúng thứ bạn cần.
+- **Không kén ngôn ngữ.** Python, Go, JS, Ruby, hay không code gì cả. Điền Tech Stack + Commands là chạy.
+
+## Bốn nguyên tắc
+
+![Bốn nguyên tắc: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution](assets/principles.svg)
+
+Bốn nguyên tắc này (phỏng theo repo Karpathy) là trái tim của `.claude/rules/AGENT.md`:
+
+1. **Think Before Coding** — nói rõ giả định, nêu tradeoff, hỏi khi chưa chắc thay vì đoán.
+2. **Simplicity First** — viết đúng lượng code tối thiểu giải quyết vấn đề, không vẽ vời.
+3. **Surgical Changes** — chỉ đụng thứ liên quan tới yêu cầu, không "sửa dạo" code xung quanh.
+4. **Goal-Driven Execution** — định nghĩa "thế nào là xong", rồi kiểm chứng từng khẳng định (file có thật? test có chạy?) trước khi nói "done".
+
+## Dành cho ai
+
+- **Mới dùng Claude Code** — có sẵn setup chạy được + tutorial 10 bước (`FIRST-PROMPTS.md`) thay vì một folder trống.
+- **Dev** — thả `.claude/` + `CLAUDE.md` vào repo bất kỳ, chạy `/init`, Claude làm việc có guardrail + rule chất lượng ngay từ đầu.
+- **Người làm nội dung & marketer** — cùng bộ kỷ luật (không bịa, human-in-the-loop, xử lý file an toàn) áp cho cả viết lách và automation, không chỉ code.
 
 ## Bắt đầu nhanh (3 phút)
 
@@ -45,6 +72,8 @@ claude          # mở Claude Code
 | `extras/` | **Tùy chọn**: status line, hooks, sandbox, skills, subagents. Xem dưới. |
 
 ## Extras (tùy chọn)
+
+![Extras: một lõi dự án bao quanh bởi 5 add-on opt-in — statusline, hooks, sandbox, skills, subagents](assets/extras.svg)
 
 Phần lõi ở trên là đủ để bắt đầu. Khi cần thêm, `extras/` có các add-on opt-in — mỗi cái có README riêng và link
 bài hướng dẫn đầy đủ trên ongboit.com. Chỉ copy cái bạn cần.
