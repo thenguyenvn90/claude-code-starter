@@ -1,0 +1,24 @@
+{
+  "name": "claude-code-starter",
+  "id": "claude-code-starter",
+  "owner": {
+    "name": "thenguyenvn90"
+  },
+  "metadata": {
+    "description": "Starter kit for Claude Code: sensible CLAUDE.md, guardrails, and curated skills.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-starter",
+      "source": "./",
+      "description": "Curated Claude Code skills (commit-helper) from the claude-code-starter kit. Full project template on GitHub.",
+      "version": "1.0.0",
+      "author": {
+        "name": "thenguyenvn90"
+      },
+      "keywords": ["starter", "template", "guardrails", "best-practices", "claude-code"],
+      "category": "workflow"
+    }
+  ]
+}

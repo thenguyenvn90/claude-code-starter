@@ -1,0 +1,12 @@
+{
+  "_comment": "Merge into ~/.claude/settings.json to run bash commands sandboxed. Then run /sandbox in Claude Code to pick a mode. macOS/Linux/WSL2 only (native Windows -> use WSL2). Linux/WSL2 need: sudo apt-get install bubblewrap socat.",
+  "sandbox": {
+    "enabled": true,
+    "credentials": {
+      "files": [
+        { "path": "~/.aws/credentials", "mode": "deny" },
+        { "path": "~/.ssh", "mode": "deny" }
+      ]
+    }
+  }
+}

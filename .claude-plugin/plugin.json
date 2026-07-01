@@ -1,0 +1,11 @@
+{
+  "name": "claude-code-starter",
+  "description": "Curated Claude Code skills from the claude-code-starter kit (commit-helper). The full kit — CLAUDE.md, guardrails, statusline, hooks, sandbox — is a GitHub template: github.com/thenguyenvn90/claude-code-starter",
+  "version": "1.0.0",
+  "author": {
+    "name": "thenguyenvn90"
+  },
+  "license": "MIT",
+  "keywords": ["starter", "template", "guardrails", "best-practices", "claude-code"],
+  "skills": ["./extras/skills/commit-helper"]
+}
